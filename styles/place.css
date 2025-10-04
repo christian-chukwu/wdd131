@@ -23,7 +23,7 @@ footer {
 }
 
 footer {
-  background-color: var(--secondary-color);
+  background-color: var(--text-color);
   color: var(--neutral-color);
 }
 
@@ -71,17 +71,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-main {
-  padding: 1rem;
-}
-
-section {
-  margin: 1rem 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-.culture em {
-  font-style: italic;
+@font-face {
+  font-family: 'Segoe UI';
+  font-display: swap;
 }

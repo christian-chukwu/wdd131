@@ -11,17 +11,6 @@
     right: 5%;
   }
 
-  .intro,
-  .culture {
-    max-width: 800px;
-    margin: 1rem auto;
-  }
-
-  .culture h2::after {
-    content: " 🍽️";
-    margin-left: 0.5rem;
-  }
-
   footer {
     font-size: 1rem;
   }

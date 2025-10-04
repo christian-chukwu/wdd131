@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore Côte d'Ivoire's vibrant culture, weather, and top attractions. Discover the beauty of West Africa through landscapes, cuisine, and heritage." />
   <title>Côte d'Ivoire</title>
+  <link rel="preload" as="image" href="images/ivorycoast.webp" />
   <link rel="stylesheet" href="styles/place.css" />
   <link rel="stylesheet" href="styles/place-large.css" />
   <script src="scripts/weather.js" defer></script>
@@ -16,7 +19,7 @@
     <div class="hero">
       <picture>
         <source srcset="images/ivorycoast.webp" media="(min-width: 600px)" />
-        <img src="images/ivorycoast.webp" alt="Côte d'Ivoire landscape" />
+        <img src="images/ivorycoast.webp" alt="Côte d'Ivoire landscape" width="1200" height="600" />
       </picture>
 
       <div class="overlay left">
@@ -41,20 +44,6 @@
       </div>
     </div>
   </header>
-
-  <main>
-    <section class="intro">
-      <h2>Discover Côte d'Ivoire</h2>
-      <p>Côte d'Ivoire is known for its lush rainforests, vibrant cities, and rich cultural heritage. From Abidjan’s
-        skyline to Yamoussoukro’s basilica, it’s a country of contrast and beauty.</p>
-    </section>
-
-    <section class="culture">
-      <h2>Culture & Cuisine</h2>
-      <p>Try dishes like <em>attieke</em> (cassava couscous), <em>aloco</em> (fried plantains), and grilled fish with
-        spicy sauce. Côte d'Ivoire blends French influence with West African flavor.</p>
-    </section>
-  </main>
 
   <footer>
     <p>&copy; <span id="year"></span> Christian Chukwu, Côte d’Ivoire | Last Modified: <span id="lastModified"></span>
