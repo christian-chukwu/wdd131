@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #f77f00;
+  /* Orange */
+  --secondary-color: #009e60;
+  /* Green */
+  --neutral-color: #ffffff;
+  --text-color: #333;
+  --font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--neutral-color);
+  color: var(--text-color);
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--neutral-color);
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overlay.left {
+  left: 5%;
+}
+
+.overlay.right {
+  right: 5%;
+}
+
+.overlay h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.overlay img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.culture em {
+  font-style: italic;
+}

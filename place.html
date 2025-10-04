@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Côte d'Ivoire</title>
+  <link rel="stylesheet" href="styles/place.css" />
+  <link rel="stylesheet" href="styles/place-large.css" />
+  <script src="scripts/weather.js" defer></script>
+</head>
+
+<body>
+  <header>
+      <h1>Welcome to Côte d'Ivoire</h1>
+    <div class="hero">
+      <picture>
+        <source srcset="images/ivorycoast.webp" media="(min-width: 600px)" />
+        <img src="images/ivorycoast.webp" alt="Côte d'Ivoire landscape" />
+      </picture>
+
+      <div class="overlay left">
+        <h2>Weather</h2>
+          <img src="images/weather.svg" alt="Sunny weather icon" />
+        <p>🌡️ Temp: 45°F</p>
+        <p>💨 Wind: 5 mph</p>
+        <p>🌤️ Condition: Sunny/Cloudy</p>
+        <p>📍 Location: West Africa</p>
+        <p>❄️ Wind Chill: <span id="windchill"></span></p>
+      </div>
+
+      <div class="overlay right">
+        <h2>Country Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 322,463 km²</li>
+          <li><strong>Population:</strong> ~29 million</li>
+          <li><strong>Capital:</strong>Yamoussoukro</li>
+          <li><strong>Currency:</strong>CFA franc (XOF)</li>
+          <li><strong>Language:</strong>French</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Discover Côte d'Ivoire</h2>
+      <p>Côte d'Ivoire is known for its lush rainforests, vibrant cities, and rich cultural heritage. From Abidjan’s
+        skyline to Yamoussoukro’s basilica, it’s a country of contrast and beauty.</p>
+    </section>
+
+    <section class="culture">
+      <h2>Culture & Cuisine</h2>
+      <p>Try dishes like <em>attieke</em> (cassava couscous), <em>aloco</em> (fried plantains), and grilled fish with
+        spicy sauce. Côte d'Ivoire blends French influence with West African flavor.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Christian Chukwu, Côte d’Ivoire | Last Modified: <span id="lastModified"></span>
+    </p>
+  </footer>
+</body>
+
+</html>
