@@ -15,3 +15,8 @@
     font-size: 1rem;
   }
 }
+.overlay.left h2::after {
+  content: " ⛅";
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}

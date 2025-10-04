@@ -75,3 +75,7 @@ footer {
   font-family: 'Segoe UI';
   font-display: swap;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
