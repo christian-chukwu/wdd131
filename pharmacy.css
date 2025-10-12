@@ -1,0 +1,311 @@
+/* ====================================================
+   GLOBAL STYLES & VARIABLES
+==================================================== */
+:root {
+  --primary-color-Black: #000000;
+  --secondary-color-White: #FFFFFF;
+  --accent1-color-Gray: #444444;
+  --accent2-color-Light-Gray: #CCCCCC;
+  --accent3-color-Off-White: #F5F5F5;
+
+  --poppins-regular: "Poppins", sans-serif;
+  --poppins-regular-weight: 400;
+  --poppins-thin: "Poppins", sans-serif;
+  --poppins-thin-weight: 100;
+
+  --headline-color-on-white: var(--primary-color-Black);
+  --headline-color-on-color: var(--secondary-color-White);
+  --paragraph-color-on-white: var(--primary-color-Black);
+  --paragraph-color-on-color: var(--secondary-color-White);
+  --paragraph-background-color: var(--primary-color-Black);
+
+  --nav-link-color: var(--secondary-color-White);
+  --nav-background-color: var(--primary-color-Black);
+  --nav-hover-link-color: var(--accent2-color-Light-Gray);
+  --nav-hover-background-color: var(--accent1-color-Gray);
+}
+
+body {
+  font-family: var(--poppins-regular);
+  background-color: var(--accent3-color-Off-White);
+  color: var(--headline-color-on-white);
+  margin: 0;
+}
+
+/* ====================================================
+   HEADER & NAVIGATION (Shared Across All Pages)
+==================================================== */
+header {
+  background-color: var(--nav-background-color);
+  color: var(--headline-color-on-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+/* ====================================================
+   FOOTER (Shared Across All Pages)
+==================================================== */
+footer {
+  background-color: var(--nav-background-color);
+  color: var(--headline-color-on-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+footer p,
+footer a {
+  margin: 0.3rem;
+  color: var(--headline-color-on-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-right a {
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-right img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ====================================================
+   HOMEPAGE STYLES
+==================================================== */
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.hero-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.vision,
+.history {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* === Pharmacy View Section === */
+.pharmacy-view {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.pharmacy-view h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color-Black);
+}
+
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.photo-row figure {
+  background-color: var(--secondary-color-White);
+  border: 1px solid var(--accent2-color-Light-Gray);
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 280px;
+}
+
+.photo-row img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.photo-row figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color-Black);
+}
+
+/* ====================================================
+   PRODUCTS PAGE STYLES
+==================================================== */
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--accent2-color-Light-Gray);
+  color: var(--primary-color-Black);
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--accent1-color-Gray);
+  color: var(--secondary-color-White);
+}
+
+.filter-btn.active {
+  background-color: var(--nav-background-color);
+  color: var(--secondary-color-White);
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color-White);
+  border: 1px solid var(--accent2-color-Light-Gray);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-card img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-info {
+  margin-left: 1rem;
+}
+
+.product-info p {
+  margin: 0.3rem 0;
+}
+
+/* ====================================================
+   ORDER PAGE STYLES
+==================================================== */
+main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--secondary-color-White);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.order-form label {
+  font-weight: bold;
+  color: var(--primary-color-Black);
+}
+
+.order-form input,
+.order-form select {
+  padding: 0.5rem;
+  border: 1px solid var(--accent2-color-Light-Gray);
+  border-radius: 5px;
+  font-family: var(--poppins-regular);
+}
+
+.order-form button {
+  padding: 0.7rem;
+  background-color: var(--nav-background-color);
+  color: var(--secondary-color-White);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+  background-color: var(--accent1-color-Gray);
+}
+
+/* ====================================================
+   CONTACT PAGE STYLES
+==================================================== */
+.team-gallery {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.team-gallery h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color-Black);
+}
+
+/* Reuse .photo-row styles from homepage */

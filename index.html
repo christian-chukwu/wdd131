@@ -3,56 +3,94 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WDD 131 – Dynamic Web Fundamentals – Christian Chukwu</title>
-  <meta name="description"
-    content="WDD 131 – Dynamic Web Fundamentals. Christian Chukwu. Web development, programming, and design fundamentals.">
+  <meta name="description" content="Explore the world of pharmacy with Caszmeds. Your health, our priority." />
+  <title>Caszmeds Pharmacy</title>
   <meta name="author" content="Christian Chukwu">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <script src="scripts/getdates.js" defer></script>
+  <link rel="stylesheet" href="pharmacy.css" />
 </head>
 
 <body>
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <div class="header-content">
+      <img src="images/logo.jpg" alt="Caszmeds Logo" class="logo" />
+      <h1>Caszmeds Pharmacy</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="https://www.linkedin.com/in/christian-chukwu-a266201b1">LinkedIn</a>
-      <a href="https://byupw.instructure.com/">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/7?lang=eng&id=p1#p1">Favorite
-        Scripture</a>
-      <a href="#">Final Project</a>
-      <a href="about.html">About Me</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Order</a>
       <a href="contact.html">Contact</a>
+      <a href="references.html">References</a>
     </nav>
   </header>
 
   <main>
-    <h1>Christian Chukwu</h1>
-
-    <section class="card">
-      <h2>About Me</h2>
-      <img src="images/profile.webp" alt="Christian Chukwu profile picture">
-      <p>I’m a multilingual educator and aspiring web developer student of BYU-IDAHO, based in Côte d’Ivoire. I love teaching, coding, and
-        uplifting others through mentorship and faith. This semester, I’m focused on mastering HTML, CSS, and JavaScript,</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/store.jpg" alt="Caszmeds storefront" loading="lazy" />
+      <div class="hero-text">
+        <h2>Mission: Affordable Health, Accessible Care</h2>
+        <p>Caszmeds is committed to delivering trusted healthcare products with compassion and integrity.</p>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>My country | Côte d'Ivoire</h2>
-      <img src="images/flag.webp" alt="flag of Côte d’Ivoire ">
-      <p>Côte d’Ivoire, also known as Ivory Coast, is a country located in West Africa. It is known for its rich cultural
-        heritage, diverse wildlife, and beautiful landscapes.</p>
+    <!-- Vision Section -->
+    <section class="vision">
+      <h3>Our Vision</h3>
+      <p>To become a leading community pharmacy that empowers individuals through health education, reliable service,
+        and digital access to essential care.</p>
     </section>
+
+    <!-- History & Impact Section -->
+    <section class="history">
+      <h3>Our Story</h3>
+      <p>Caszmeds began as a small neighborhood pharmacy with a big heart. Over the years, we've served hundreds of
+        families, provided free health consultations, and built lasting trust in our community. This website is part of
+        our journey to expand access and continue making a difference.</p>
+    </section>
+
+  <!-- Pharmacy View Section -->
+  <section class="pharmacy-view">
+    <h3>Pharmacy View</h3>
+    <div class="photo-row">
+      <figure>
+        <img src="images/front.jpeg" alt="Pharmacy Front View" loading="lazy" />
+        <figcaption>Front View</figcaption>
+      </figure>
+      <figure>
+        <img src="images/inside.jpg" alt="Pharmacy Inside View" loading="lazy" />
+        <figcaption>Inside View</figcaption>
+      </figure>
+      <figure>
+        <img src="images/shel.webp" alt="Left Side View" loading="lazy" />
+        <figcaption>Left Side View</figcaption>
+      </figure>
+      <figure>
+        <img src="images/producer.jpg" alt="Lab View" loading="lazy" />
+        <figcaption>Lab View</figcaption>
+      </figure>
+    </div>
+  </section>
+
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Christian Chukwu, Côte d’Ivoire</p>
-    <p id="lastModified"></p>
+    <div class="footer-left">
+      <p>&copy; <span id="currentyear"></span> Caszmeds Pharmacy | Abidjan, Côte d’Ivoire</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+    <div class="footer-right">
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://twitter.com" target="_blank">Twitter</a> |
+      <a href="https://wa.me/22507000000" target="_blank">WhatsApp</a>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

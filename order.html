@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Christian Chukwu</title>
+  <meta name="description" content="Explore the world of pharmacy with Caszmeds. Your health, our priority." />
+  <title>Caszmeds Pharmacy</title>
+  <meta name="author" content="Christian Chukwu">
+  <link rel="stylesheet" href="pharmacy.css" />
+  </head>
+  
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="images/logo.jpg" alt="Caszmeds Logo" class="logo" />
+        <h1>Caszmeds Pharmacy</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+        <a href="references.html">References</a>
+  </header>
+
+  <main>
+    <h2>Place Your Order</h2>
+    <form class="order-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="product">Select Product Category:</label>
+      <select id="product" name="product" required>
+        <option value="">--Choose--</option>
+        <option value="pain">Pain Relief</option>
+        <option value="vitamins">Vitamins</option>
+        <option value="hygiene">Hygiene</option>
+        <option value="antibiotics">Antibiotics</option>
+        <option value="antimalarials">Antimalarials</option>
+        <option value="cough">Cough & Cold</option>
+        <option value="skin">Skin Care</option>
+        <option value="digestive">Digestive Health</option>
+        <option value="eye">Eye Care</option>
+        <option value="baby">Baby Care</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" required />
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>&copy; <span id="currentyear"></span> Caszmeds Pharmacy | Abidjan, Côte d’Ivoire</p>
+      <p><a href="references.html">References</a></p>
+    </div>
+    <div class="footer-right">
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://twitter.com" target="_blank">Twitter</a> |
+      <a href="https://wa.me/22507000000" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
