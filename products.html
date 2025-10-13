@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>WDD 131 – Dynamic Web Fundamentals – Christian Chukwu</title>
 <meta name="description" content="Explore the world of pharmacy with Caszmeds. Your health, our priority." />
-<title>Caszmeds Pharmacy</title>
 <meta name="author" content="Christian Chukwu">
 <link rel="stylesheet" href="pharmacy.css" />
+<script src="scripts/site.js" defer></script>
 </head>
 
 <body>
@@ -17,13 +17,19 @@
       <img src="images/logo.jpg" alt="Caszmeds Logo" class="logo" />
       <h1>Caszmeds Pharmacy</h1>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="order.html">Order</a>
-      <a href="contact.html">Contact</a>
-      <a href="references.html">References</a>
-    </nav>
+  <nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+
   </header>
 
   <main>
@@ -36,8 +42,6 @@
       <button class="filter-btn" onclick="filterProducts('antibiotics')">Antibiotics</button>
       <button class="filter-btn" onclick="filterProducts('antimalarials')">Antimalarials</button>
       <button class="filter-btn" onclick="filterProducts('cough')">Cough & Cold</button>
-      <button class="filter-btn" onclick="filterProducts('skin')">Skin Care</button>
-      <button class="filter-btn" onclick="filterProducts('digestive')">Digestive Health</button>
       <button class="filter-btn" onclick="filterProducts('eye')">Eye Care</button>
     </div>
 
@@ -49,6 +53,7 @@
   <footer>
     <div class="footer-left">
       <p>&copy; <span id="currentyear"></span> Caszmeds Pharmacy | Abidjan, Côte d’Ivoire</p>
+          <p id="lastModified"></p>
       <p><a href="references.html">References</a></p>
     </div>
     <div class="footer-right">
@@ -58,50 +63,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-    const products = [
-      { name: "Paracetamol", price: "500 Franc", category: "pain", image: "images/paracetamol.webp" },
-      { name: "Ibuprofen", price: "700 Franc", category: "pain", image: "images/ibrufen.webp" },
-      { name: "Vitamin C", price: "800 Franc", category: "vitamins", image: "images/vitamin.webp" },
-      { name: "Multivitamins", price: "1500 Franc", category: "vitamins", image: "images/multivitamins.webp" },
-      { name: "Antiseptic", price: "1200 Franc", category: "hygiene", image: "images/antisep.webp" },
-      { name: "Hand Sanitizer", price: "1000 Franc", category: "hygiene", image: "images/santizer.webp" },
-      { name: "Amoxicillin", price: "2000 Franc", category: "antibiotics", image: "images/amoxici.webp" },
-      { name: "Coartem", price: "1800 Franc", category: "antimalarials", image: "images/coartem.webp" },
-      { name: "Cough Syrup", price: "900 Franc", category: "cough", image: "images/cough.webp" },
-      { name: "Eye Drops", price: "600 Franc", category: "eye", image: "images/eye_drops.webp" }
-    ];
-
-    function displayProducts(list) {
-      const grid = document.getElementById("productGrid");
-      grid.innerHTML = "";
-      list.forEach(product => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-        card.setAttribute("data-category", product.category);
-        card.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" loading="lazy" />
-          <div class="product-info">
-            <p><strong>${product.name}</strong></p>
-            <p>${product.price}</p>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function filterProducts(category) {
-      document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-      document.querySelector(`.filter-btn[onclick*="${category}"]`)?.classList.add("active");
-
-      const filtered = category === "all" ? products : products.filter(p => p.category === category);
-      displayProducts(filtered);
-    }
-
-    displayProducts(products);
-  </script>
 </body>
 
 </html>
