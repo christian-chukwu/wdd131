@@ -128,12 +128,14 @@ orderForm.addEventListener("submit", function (e) {
 });
 
 // HUMBGER 
-// Hamburger toggle
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const navMenu = document.getElementById("navMenu");
 
-if (hamburgerBtn && navMenu) {
-  hamburgerBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-}
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  }
+});
+
