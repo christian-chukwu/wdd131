@@ -139,3 +139,48 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+//product page 2
+document.addEventListener("DOMContentLoaded", () => {
+  // Dynamic year and last modified
+  document.getElementById("currentyear").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+
+  // Hamburger toggle
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const navMenu = document.getElementById("navMenu");
+  if (hamburgerBtn && navMenu) {
+    hamburgerBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  }
+
+  // Product filtering
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+
+  function filterProducts(category) {
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    document.querySelector(`.filter-btn[data-category="${category}"]`)?.classList.add("active");
+
+    productCards.forEach(card => {
+      const match = category === "all" || card.dataset.category === category;
+      card.style.display = match ? "block" : "none";
+    });
+
+    localStorage.setItem("lastCategory", category);
+  }
+
+  // Load saved category
+  const savedCategory = localStorage.getItem("lastCategory") || "all";
+  filterProducts(savedCategory);
+
+  // Attach click listeners
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category;
+      filterProducts(category);
+    });
+  });
+});
+
+// sample

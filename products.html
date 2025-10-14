@@ -31,23 +31,103 @@
 
   </header>
 
-  <main>
-    <h2>Our Products</h2>
-    <div class="filter-menu">
-      <button class="filter-btn active" onclick="filterProducts('all')">All</button>
-      <button class="filter-btn" onclick="filterProducts('pain')">Pain Relief</button>
-      <button class="filter-btn" onclick="filterProducts('vitamins')">Vitamins</button>
-      <button class="filter-btn" onclick="filterProducts('hygiene')">Hygiene</button>
-      <button class="filter-btn" onclick="filterProducts('antibiotics')">Antibiotics</button>
-      <button class="filter-btn" onclick="filterProducts('antimalarials')">Antimalarials</button>
-      <button class="filter-btn" onclick="filterProducts('cough')">Cough & Cold</button>
-      <button class="filter-btn" onclick="filterProducts('eye')">Eye Care</button>
+<main>
+  <h2>Our Products</h2>
+
+  <div class="filter-menu">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="pain">Pain Relief</button>
+    <button class="filter-btn" data-category="vitamins">Vitamins</button>
+    <button class="filter-btn" data-category="hygiene">Hygiene</button>
+    <button class="filter-btn" data-category="antibiotics">Antibiotics</button>
+    <button class="filter-btn" data-category="antimalarials">Antimalarials</button>
+    <button class="filter-btn" data-category="cough">Cough & Cold</button>
+    <button class="filter-btn" data-category="eye">Eye Care</button>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <div class="product-card" data-category="pain">
+      <img src="images/paracetamol.webp" alt="Paracetamol" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Paracetamol</strong></p>
+        <p>500 Franc</p>
+      </div>
     </div>
 
-    <div class="product-grid" id="productGrid">
-      <!-- Product cards will be injected here -->
+    <div class="product-card" data-category="pain">
+      <img src="images/ibrufen.webp" alt="Ibuprofen" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Ibuprofen</strong></p>
+        <p>700 Franc</p>
+      </div>
     </div>
-  </main>
+
+    <div class="product-card" data-category="vitamins">
+      <img src="images/vitamin.webp" alt="Vitamin C" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Vitamin C</strong></p>
+        <p>800 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="vitamins">
+      <img src="images/multivitamins.webp" alt="Multivitamins" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Multivitamins</strong></p>
+        <p>1500 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="hygiene">
+      <img src="images/antisep.webp" alt="Antiseptic" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Antiseptic</strong></p>
+        <p>1200 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="hygiene">
+      <img src="images/santizer.webp" alt="Hand Sanitizer" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Hand Sanitizer</strong></p>
+        <p>1000 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="antibiotics">
+      <img src="images/amoxici.webp" alt="Amoxicillin" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Amoxicillin</strong></p>
+        <p>2000 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="antimalarials">
+      <img src="images/coartem.webp" alt="Coartem" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Coartem</strong></p>
+        <p>1800 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="cough">
+      <img src="images/cough.webp" alt="Cough Syrup" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Cough Syrup</strong></p>
+        <p>900 Franc</p>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="eye">
+      <img src="images/eye_drops.webp" alt="Eye Drops" loading="lazy" />
+      <div class="product-info">
+        <p><strong>Eye Drops</strong></p>
+        <p>600 Franc</p>
+      </div>
+    </div>
+  </div>
+</main>
+
 
   <footer>
     <div class="footer-left">
