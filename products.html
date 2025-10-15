@@ -2,137 +2,133 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>WDD 131 – Dynamic Web Fundamentals – Christian Chukwu</title>
-<meta name="description" content="Explore the world of pharmacy with Caszmeds. Your health, our priority." />
-<meta name="author" content="Christian Chukwu">
-<link rel="stylesheet" href="pharmacy.css" />
-<script src="scripts/site.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caszmeds – Products</title>
+  <meta name="description" content="Explore the world of pharmacy with Caszmeds. Your health, our priority." />
+  <meta name="author" content="Christian Chukwu">
+  <link rel="stylesheet" href="pharmacy.css" />
+  <script src="scripts/site.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <div class="header-content">
-      <img src="images/logo.jpg" alt="Caszmeds Logo" class="logo" />
-      <h1>Caszmeds Pharmacy</h1>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Caszmeds Logo" />
     </div>
-  <nav>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">&#9776;</button>
-    <ul class="nav-links" id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="order.html">Order</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="references.html">References</a></li>
-    </ul>
-  </nav>
-
-
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="references.html">References</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
-<main>
-  <h2>Our Products</h2>
 
-  <div class="filter-menu">
-    <button class="filter-btn active" data-category="all">All</button>
-    <button class="filter-btn" data-category="pain">Pain Relief</button>
-    <button class="filter-btn" data-category="vitamins">Vitamins</button>
-    <button class="filter-btn" data-category="hygiene">Hygiene</button>
-    <button class="filter-btn" data-category="antibiotics">Antibiotics</button>
-    <button class="filter-btn" data-category="antimalarials">Antimalarials</button>
-    <button class="filter-btn" data-category="cough">Cough & Cold</button>
-    <button class="filter-btn" data-category="eye">Eye Care</button>
-  </div>
+  <main>
+    <h2>Our Products</h2>
 
-  <div class="product-grid" id="productGrid">
-    <div class="product-card" data-category="pain">
-      <img src="images/paracetamol.webp" alt="Paracetamol" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Paracetamol</strong></p>
-        <p>500 Franc</p>
-      </div>
+    <div class="filter-menu">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="pain">Pain Relief</button>
+      <button class="filter-btn" data-category="vitamins">Vitamins</button>
+      <button class="filter-btn" data-category="hygiene">Hygiene</button>
+      <button class="filter-btn" data-category="antibiotics">Antibiotics</button>
+      <button class="filter-btn" data-category="antimalarials">Antimalarials</button>
+      <button class="filter-btn" data-category="cough">Cough & Cold</button>
+      <button class="filter-btn" data-category="eye">Eye Care</button>
     </div>
 
-    <div class="product-card" data-category="pain">
-      <img src="images/ibrufen.webp" alt="Ibuprofen" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Ibuprofen</strong></p>
-        <p>700 Franc</p>
+    <div class="product-grid" id="productGrid">
+      <div class="product-card" data-category="pain">
+        <img src="images/paracetamol.webp" alt="Paracetamol" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Paracetamol</strong></p>
+          <p>500 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="vitamins">
-      <img src="images/vitamin.webp" alt="Vitamin C" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Vitamin C</strong></p>
-        <p>800 Franc</p>
+      <div class="product-card" data-category="pain">
+        <img src="images/ibrufen.webp" alt="Ibuprofen" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Ibuprofen</strong></p>
+          <p>700 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="vitamins">
-      <img src="images/multivitamins.webp" alt="Multivitamins" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Multivitamins</strong></p>
-        <p>1500 Franc</p>
+      <div class="product-card" data-category="vitamins">
+        <img src="images/vitamin.webp" alt="Vitamin C" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Vitamin C</strong></p>
+          <p>800 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="hygiene">
-      <img src="images/antisep.webp" alt="Antiseptic" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Antiseptic</strong></p>
-        <p>1200 Franc</p>
+      <div class="product-card" data-category="vitamins">
+        <img src="images/multivitamins.webp" alt="Multivitamins" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Multivitamins</strong></p>
+          <p>1500 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="hygiene">
-      <img src="images/santizer.webp" alt="Hand Sanitizer" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Hand Sanitizer</strong></p>
-        <p>1000 Franc</p>
+      <div class="product-card" data-category="hygiene">
+        <img src="images/antisep.webp" alt="Antiseptic" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Antiseptic</strong></p>
+          <p>1200 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="antibiotics">
-      <img src="images/amoxici.webp" alt="Amoxicillin" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Amoxicillin</strong></p>
-        <p>2000 Franc</p>
+      <div class="product-card" data-category="hygiene">
+        <img src="images/santizer.webp" alt="Hand Sanitizer" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Hand Sanitizer</strong></p>
+          <p>1000 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="antimalarials">
-      <img src="images/coartem.webp" alt="Coartem" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Coartem</strong></p>
-        <p>1800 Franc</p>
+      <div class="product-card" data-category="antibiotics">
+        <img src="images/amoxici.webp" alt="Amoxicillin" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Amoxicillin</strong></p>
+          <p>2000 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="cough">
-      <img src="images/cough.webp" alt="Cough Syrup" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Cough Syrup</strong></p>
-        <p>900 Franc</p>
+      <div class="product-card" data-category="antimalarials">
+        <img src="images/coartem.webp" alt="Coartem" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Coartem</strong></p>
+          <p>1800 Franc</p>
+        </div>
       </div>
-    </div>
 
-    <div class="product-card" data-category="eye">
-      <img src="images/eye_drops.webp" alt="Eye Drops" loading="lazy" />
-      <div class="product-info">
-        <p><strong>Eye Drops</strong></p>
-        <p>600 Franc</p>
+      <div class="product-card" data-category="cough">
+        <img src="images/cough.webp" alt="Cough Syrup" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Cough Syrup</strong></p>
+          <p>900 Franc</p>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="eye">
+        <img src="images/eye_drops.webp" alt="Eye Drops" loading="lazy" />
+        <div class="product-info">
+          <p><strong>Eye Drops</strong></p>
+          <p>600 Franc</p>
+        </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
 
   <footer>
     <div class="footer-left">
       <p>&copy; <span id="currentyear"></span> Caszmeds Pharmacy | Abidjan, Côte d’Ivoire</p>
-          <p id="lastModified"></p>
+      <p id="lastModified"></p>
       <p><a href="references.html">References</a></p>
     </div>
     <div class="footer-right">

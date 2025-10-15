@@ -10,23 +10,20 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-content">
-      <img src="images/logo.jpg" alt="Caszmeds Logo" class="logo" />
-      <h1>Caszmeds Pharmacy</h1>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Caszmeds Logo" />
     </div>
-  <nav>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">&#9776;</button>
-    <ul class="nav-links" id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="order.html">Order</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="references.html">References</a></li>
-    </ul>
-  </nav>
-
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="references.html">References</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
+
 
   <main>
     <h2>Medical References</h2>
@@ -39,11 +36,13 @@
       <li><a href="https://www.rxlist.com/" target="_blank">RxList – Prescription Drug Index</a></li>
       <li><a href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank">PubChem – Chemical & Drug Database</a></li>
       <li><a href="https://www.pdr.net/" target="_blank">PDR.net – Prescriber's Digital Reference</a></li>
-      <li><a href="https://www.ahfsdruginformation.com/" target="_blank">AHFS Drug Information – ASHP Monographs</a></li>
+      <li><a href="https://www.ahfsdruginformation.com/" target="_blank">AHFS Drug Information – ASHP Monographs</a>
+      </li>
       <li><a href="https://www.mayoclinic.org/drugs-supplements" target="_blank">Mayo Clinic – Drugs & Supplements</a>
       </li>
       <li><a href="https://www.webmd.com/drugs/2/index" target="_blank">WebMD – Drug Index</a></li>
-      <li><a href="https://www.who.int/teams/health-product-and-policy-standards/essential-medicines" target="_blank">WHO
+      <li><a href="https://www.who.int/teams/health-product-and-policy-standards/essential-medicines"
+          target="_blank">WHO
           – Essential Medicines List</a></li>
       <li><a href="https://www.fda.gov/drugs" target="_blank">FDA – Drugs & Drug Safety</a></li>
       <li><a href="https://www.cdc.gov/drugoverdose/index.html" target="_blank">CDC – Drug Overdose Prevention</a></li>
@@ -53,7 +52,8 @@
       <li><a href="https://www.nhs.uk/medicines/" target="_blank">NHS – Medicines A to Z</a></li>
       <li><a href="https://www.medicines.org.uk/emc/" target="_blank">Electronic Medicines Compendium (UK)</a></li>
       <li><a href="https://www.clinicaltrials.gov/" target="_blank">ClinicalTrials.gov – Research Studies</a></li>
-      <li><a href="https://www.pharmaeducation.net/drug-information-website-list/" target="_blank">PharmaEducation – Drug
+      <li><a href="https://www.pharmaeducation.net/drug-information-website-list/" target="_blank">PharmaEducation –
+          Drug
           Info Website List</a></li>
     </ul>
   </main>
@@ -61,7 +61,7 @@
   <footer>
     <div class="footer-left">
       <p>&copy; <span id="currentyear"></span> Caszmeds Pharmacy | Abidjan, Côte d’Ivoire</p>
-          <p id="lastModified"></p>
+      <p id="lastModified"></p>
       <p><a href="references.html">References</a></p>
     </div>
     <div class="footer-right">

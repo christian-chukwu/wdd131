@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 131 – Dynamic Web Fundamentals – Christian Chukwu</title>
+  <title>Caszmeds – Homepage</title>
   <meta name="description" content="Explore the world of pharmacy with Caszmeds. Your health, our priority." />
   <meta name="author" content="Christian Chukwu">
   <link rel="stylesheet" href="pharmacy.css" />
@@ -12,79 +12,70 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-content">
-      <img src="images/logo.jpg" alt="Caszmeds Logo" class="logo" />
-      <h1>Caszmeds Pharmacy</h1>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Caszmeds Logo" />
     </div>
-<nav>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">&#9776;</button>
-  <ul class="nav-links" id="navMenu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="order.html">Order</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="references.html">References</a></li>
-  </ul>
-</nav>
-
-
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="order.html">Order</a>
+      <a href="contact.html">Contact</a>
+      <a href="references.html">References</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </header>
 
   <main>
     <!-- Hero Section -->
     <section class="hero">
       <img src="images/store.jpg" alt="Caszmeds storefront" loading="lazy" />
-      <div class="hero-text">
-        <h2>Mission: Affordable Health, Accessible Care</h2>
-        <p>Caszmeds is committed to delivering trusted healthcare products with compassion and integrity.</p>
-      </div>
+      <div class="hero-text"></div>
     </section>
 
     <!-- Vision Section -->
+    <h1>Caszmeds Pharmacy</h1>
     <section class="vision">
       <h3>Our Vision</h3>
       <p>To become a leading community pharmacy that empowers individuals through health education, reliable service,
-        and digital access to essential care.</p>
+        and care.</p>
     </section>
 
     <!-- History & Impact Section -->
     <section class="history">
       <h3>Our Story</h3>
       <p>Caszmeds began as a small neighborhood pharmacy with a big heart. Over the years, we've served hundreds of
-        families, provided free health consultations, and built lasting trust in our community. This website is part of
-        our journey to expand access and continue making a difference.</p>
+        customers with dedication and integrity.</p>
     </section>
 
-  <!-- Pharmacy View Section -->
-  <section class="pharmacy-view">
-    <h3>Pharmacy View</h3>
-    <div class="photo-row">
-      <figure>
-        <img src="images/front.jpeg" alt="Pharmacy Front View" loading="lazy" />
-        <figcaption>Front View</figcaption>
-      </figure>
-      <figure>
-        <img src="images/inside.jpg" alt="Pharmacy Inside View" loading="lazy" />
-        <figcaption>Inside View</figcaption>
-      </figure>
-      <figure>
-        <img src="images/shel.webp" alt="Left Side View" loading="lazy" />
-        <figcaption>Left Side View</figcaption>
-      </figure>
-      <figure>
-        <img src="images/producer.jpg" alt="Lab View" loading="lazy" />
-        <figcaption>Lab View</figcaption>
-      </figure>
-    </div>
-  </section>
-
+    <!-- Pharmacy View Section -->
+    <section class="pharmacy-view">
+      <h3>Pharmacy View</h3>
+      <div class="photo-row">
+        <figure>
+          <img src="images/front.jpeg" alt="Pharmacy front view">
+          <figcaption>Front View</figcaption>
+        </figure>
+        <figure>
+          <img src="images/inside.jpg" alt="Pharmacy interior view">
+          <figcaption>Interior</figcaption>
+        </figure>
+        <figure>
+          <img src="images/shel.webp" alt="Pharmacy staff view">
+          <figcaption>Staff</figcaption>
+        </figure>
+        <figure>
+          <img src="images/producer.jpg" alt="Pharmacy laboratory view">
+          <figcaption>Products</figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-left">
       <p>&copy; <span id="currentyear"></span> Caszmeds Pharmacy | Abidjan, Côte d’Ivoire</p>
-          <p id="lastModified"></p>
+      <p id="lastModified"></p>
       <p><a href="references.html">References</a></p>
     </div>
     <div class="footer-right">
@@ -96,6 +87,10 @@
 
   <script>
     document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+    document.getElementById("hamburger").onclick = function () {
+      document.getElementById("navLinks").classList.toggle("show");
+    };
   </script>
 </body>
 

@@ -10,14 +10,11 @@
 
   --poppins-regular: "Poppins", sans-serif;
   --poppins-regular-weight: 400;
-  --poppins-thin: "Poppins", sans-serif;
-  --poppins-thin-weight: 100;
 
   --headline-color-on-white: var(--primary-color-Black);
   --headline-color-on-color: var(--secondary-color-White);
   --paragraph-color-on-white: var(--primary-color-Black);
   --paragraph-color-on-color: var(--secondary-color-White);
-  --paragraph-background-color: var(--primary-color-Black);
 
   --nav-link-color: var(--secondary-color-White);
   --nav-background-color: var(--primary-color-Black);
@@ -33,49 +30,80 @@ body {
 }
 
 /* ====================================================
-   HEADER & NAVIGATION (Shared Across All Pages)
+   HEADER & NAVIGATION
 ==================================================== */
-header {
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
   background-color: var(--nav-background-color);
   color: var(--headline-color-on-color);
-  padding: 1rem;
-  text-align: center;
+  position: relative;
+  z-index: 1000;
 }
 
-.header-content {
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.logo {
-  width: 60px;
-  height: auto;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: var(--nav-link-color);
+.nav-links a {
   text-decoration: none;
-  font-weight: bold;
+  color: var(--nav-link-color);
+  font-weight: 500;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
 }
 
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--nav-link-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--nav-background-color);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid var(--accent2-color-Light-Gray);
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
 /* ====================================================
-   FOOTER (Shared Across All Pages)
+   FOOTER
 ==================================================== */
 footer {
   background-color: var(--nav-background-color);
@@ -103,11 +131,6 @@ footer a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-}
-
-.footer-right img {
-  width: 20px;
-  height: 20px;
 }
 
 /* ====================================================
@@ -177,245 +200,4 @@ main {
   margin-top: 0.5rem;
   font-weight: bold;
   color: var(--primary-color-Black);
-}
-
-/* ====================================================
-   PRODUCTS PAGE STYLES
-==================================================== */
-h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.filter-menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.filter-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: var(--accent2-color-Light-Gray);
-  color: var(--primary-color-Black);
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.filter-btn:hover {
-  background-color: var(--accent1-color-Gray);
-  color: var(--secondary-color-White);
-}
-
-.filter-btn.active {
-  background-color: var(--nav-background-color);
-  color: var(--secondary-color-White);
-}
-
-.product-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.product-card {
-  display: flex;
-  align-items: center;
-  background-color: var(--secondary-color-White);
-  border: 1px solid var(--accent2-color-Light-Gray);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.product-card img {
-  width: 100px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.product-info {
-  margin-left: 1rem;
-}
-
-.product-info p {
-  margin: 0.3rem 0;
-}
-
-/* ====================================================
-   ORDER PAGE STYLES
-==================================================== */
-main {
-  padding: 1rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.order-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: var(--secondary-color-White);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.order-form label {
-  font-weight: bold;
-  color: var(--primary-color-Black);
-}
-
-.order-form input,
-.order-form select {
-  padding: 0.5rem;
-  border: 1px solid var(--accent2-color-Light-Gray);
-  border-radius: 5px;
-  font-family: var(--poppins-regular);
-}
-
-.order-form button {
-  padding: 0.7rem;
-  background-color: var(--nav-background-color);
-  color: var(--secondary-color-White);
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.order-form button:hover {
-  background-color: var(--accent1-color-Gray);
-}
-
-/* ====================================================
-   CONTACT PAGE STYLES
-==================================================== */
-.team-gallery {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.team-gallery h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--primary-color-Black);
-}
-
-/* Reuse .photo-row styles from homepage */
-
-/* ====================================================
-   UPDATED CSS FOR NAV HAMBURGER STYLES
-==================================================== */
-.hamburger {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #007b8a;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    padding: 0.5rem 1rem;
-    border-top: 1px solid #ffffff33;
-  }
-}
-/* ====================================================
-   google maps iframe STYLES
-==================================================== */ 
-.map-container {
-  margin-top: 1rem;
-  border: 2px solid #007b8a;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.hamburger {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: bla;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    padding: 0.5rem 1rem;
-    border-top: 1px solid #ffffff33;
-  }
 }
