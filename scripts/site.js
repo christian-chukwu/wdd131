@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Antiseptic", price: "1200 Franc", category: "hygiene", image: "images/antisep.webp" },
     { name: "Hand Sanitizer", price: "1000 Franc", category: "hygiene", image: "images/santizer.webp" },
     { name: "Amoxicillin", price: "2000 Franc", category: "antibiotics", image: "images/amoxici.webp" },
-    { name: "Coartem", price: "1800 Franc", category: "antimalarials", image: "images/coartem.webp" },
     { name: "Cough Syrup", price: "900 Franc", category: "cough", image: "images/cough.webp" },
     { name: "Eye Drops", price: "600 Franc", category: "eye", image: "images/eye_drops.webp" }
   ];
